@@ -46,7 +46,7 @@ matrix:
     compiler: gcc
   - os: windows
     env: API="wasapi"
-    script: cmake . -G "Visual Studio 15 2017" && echo "msbuild.exe /nologo /p:Configuration=Debug RtAudio.sln" >build.bat && ls && cmd /c build.bat
+    script: cmake . -G "Visual Studio 15 2017" && echo "msbuild.exe /nologo /p:Configuration=Debug RtAudio.sln" >build.bat && ls && cmd < build.bat
   # jack and asound not found on ARM gnueabihf
   # - os: linux
   #   env: HOST="--host=arm-linux-gnueabihf" API="alsa"
